@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer utilities {
+  .custom-border-gradient {
+    border: 4px solid;
+    border-image: linear-gradient(to bottom, #A940FC, #79FF0F);
+    border-image-slice: 1;
+  }
+  .underline-offset {
+    position: relative;
+  }
+  
+  .underline-offset::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; 
+    left: 4px;
+    width: calc(100% - 8px); 
+    height: 2px;
+    background-color: rgb(168 85 247 );
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .underline-offset:hover::after {
+    opacity: 1;
+  }
+  .animated-button-container > div {
+    margin-bottom: 20px;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
