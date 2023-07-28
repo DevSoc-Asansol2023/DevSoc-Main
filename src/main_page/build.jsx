@@ -91,7 +91,7 @@ const CountingNumber = ({ endValue, displayText }) => {
 
 function Build(){
   return (
-    <div className='flex flex-col h-[150vh] md:max-h-[90vh]'>
+    <div className='flex flex-col h-[100vh] md:max-h-[90vh]'>
     <div className="flex justify-center items-start h-screen bg-[#0D1117] font-inter">
       <div className="w-[993px] md:h-[500px] bg-[#1D1D1D] md:grid grid-cols-3 grid-rows-3 gap-1 p-4 relative rounded-2xl mb-0">
 

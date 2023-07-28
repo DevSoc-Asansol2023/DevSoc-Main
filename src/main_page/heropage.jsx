@@ -3,7 +3,7 @@ import animatedIcon from './pics/meow.png'
 
 function HeroPage(){
     return(
-<div className="bg-[#0D1117] min-h-screen flex flex-row items-center sm:flex flex-column font-inter">
+<div className="bg-[#0D1117] h-[70vh] lg:min-h-screen flex flex-row items-center sm:flex flex-column font-inter">
   <div className="hidden sm:block">
           <svg viewBox="0 0 24 522" className="h-96 w-64 ml-2"fill="none">
             <rect width="3" height="486.493" rx="1.5" transform="matrix(-0.999957 -0.00927469 -0.00927469 0.999957 14.5119 35.0278)" fill="url(#paint0_linear_3_7)"/>
