@@ -35,7 +35,7 @@ We welcome contributions from the community! If you'd like to work on an existin
 1. Assign yourself to the issue if it's not already assigned.
 2. Fork the repository to your GitHub account.
 3. Create a branch with a descriptive name related to the issue (e.g., `fix-bug-123` or `feature-xyz`).
-4. Work on the issue, making sure to follow our [coding guidelines](#coding-guidelines).
+4. Work on the issue, making sure to follow our [contributing guidelines](Contributing.md).
 5. Create a Pull Request (PR) when you're ready. Reference the issue number in the PR description.
 6. Our team will review your PR and provide feedback. Be prepared to make changes if necessary.
 
@@ -45,7 +45,7 @@ Before submitting a Pull Request, please ensure that you have:
 
 - Included a clear and concise description of your changes.
 - Passed all tests and linting checks.
-- Made sure your code follows our [coding guidelines](#coding-guidelines).
+- Made sure your code follows our [contributing guidelines](Contributing.md).
 - Tested your changes thoroughly.
 
 Once your PR is approved and merged, your contributions will be part of our project.
