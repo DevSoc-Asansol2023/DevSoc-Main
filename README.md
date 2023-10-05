@@ -50,10 +50,6 @@ Before submitting a Pull Request, please ensure that you have:
 
 Once your PR is approved and merged, your contributions will be part of our project.
 
-## Development Setup
-
-To set up a development environment for [Your Project Name], follow the instructions in our [Development Setup Guide](DEV_SETUP.md).
-
 ## License
 
 By contributing to DevSociety Portal, you agree that your contributions will be licensed under the project's [LICENSE](LICENSE.md).
