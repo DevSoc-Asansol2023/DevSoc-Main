@@ -27,7 +27,7 @@ Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing to o
 * ```npm i```
 * ```npm run dev```
 
-More information on [Contributing](Contributing.md)
+More information on [Contributing Guidelines](Contributing.md)
 ### Working on Issues
 
 We welcome contributions from the community! If you'd like to work on an existing issue, please make sure to follow these steps:
