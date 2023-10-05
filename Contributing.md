@@ -14,6 +14,7 @@ Before working on an existing Issue please follow these steps:
 1. comment asking for the issue to be assigned to you
 1. after the Issue is assigned to you, you can start working on it
 1. **only** start working on this Issue (and open a Pull Request) when it has been assigned to you - this will prevent confusion, multiple people working on the same issue and work not being used
+1. while making a pr make sure to add screenshots about the result after fixing the assigned issue
 
 ## Commit Message Format
 
