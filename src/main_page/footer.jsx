@@ -6,8 +6,8 @@ function Footer(){
   return (
     <footer className="bg-[#0D1117] text-white py-8 font-poppins">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex md:flex-row justify-between mt-4">
-          <div className="text-left">
+        <div className="flex flex-col justify-center md:flex-row md:justify-around items-center mt-4">
+          <div className="text-center md:text-left">
             <h3 className="text-xl font-semibold">Follow Us</h3>
             <div className="flex md:flex mt-2 space-x-2">
               <a href="https://www.instagram.com/dev.soc_aec/" className="text-white">
@@ -24,7 +24,7 @@ function Footer(){
               </a>
             </div>
           </div>
-          <div className="text-left">
+          <div className="text-center md:text-left">
             <h3 className="text-2xl font-semibold mt-7 md:mt-0">Contact Us</h3>
             <p className=" text-xl mt-2">Asansol, West Bengal-713304</p>
             <p>decsoc.aec@gmail.com</p>
