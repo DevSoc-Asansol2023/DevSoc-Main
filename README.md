@@ -2,7 +2,7 @@
 
 ![App Screenshot](https://github.com/DevSoc-Asansol2023/DevSoc-Main/assets/83803257/609b4622-e31b-4ed3-8353-4e81bfe7b821)
 
-* Our website figma design - [Figma File](https://www.figma.com/file/C1xLyZe2wvYVFdusEHRVGZ/DevSoc?type=design&node-id=0-1&mode=design&t=TAnWT775AtPhgUuM-0)
+* Our website figma design - [Figma File](https://www.figma.com/file/TrCThPaNbMacGFuGIyksuu/DevSoc-AEC-HacktoberFest?type=design&node-id=0-1&mode=design&t=75qwLwQRAobG4nuD-0)
 
 ℹ️ **Note:** DevSociety is a student run community. For any queries you can join our [discord](https://discord.gg/FAM4BeDH)
 
