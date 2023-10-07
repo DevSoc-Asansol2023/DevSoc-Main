@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -47,5 +47,7 @@ function NavBar() {
     
 
     );
+
 }
+
 export default NavBar;
