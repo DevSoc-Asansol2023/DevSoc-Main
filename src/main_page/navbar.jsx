@@ -13,34 +13,34 @@ function NavBar() {
   };
 
   const renderLinks = () => (
-    <ul className="items-end justify-end ml-0 space-y-8 md:flex md:space-x-6 md:space-y-0 text-xl">
-      <li className="text-white hover:text-purple-500 underline-offset hover:no-underline">
-        <a href="#">Home</a>
-      </li>
-      <li className="text-white hover:text-purple-500 underline-offset hover:no-underline">
-        <a href="#">About Us</a>
-      </li>
-      <li className="text-white hover:text-purple-500 underline-offset hover:no-underline">
-        <a href="#">Blog</a>
-      </li>
-      <li className="text-white hover:text-purple-500 ml-0 underline-offset hover:no-underline">
-        <span
-          onMouseEnter={toggleMenu}
-          className="text-white cursor-pointer hover:text-purple-500 hover:no-underline"
-        >
-          Your Account
-        </span>
-        {isOpen && (
-          <div className="absolute left-0 mt-2 w-48 bg-opacity-50 border border-gray-300 rounded shadow-lg">
-            <ul>
-              <li className="py-2 px-4 hover:bg-purple-500 hover:text-white cursor-pointer">Log In</li>
-              <li className="py-2 px-4 hover:bg-purple-500 hover:text-white cursor-pointer">Sign In</li>
-            </ul>
-          </div>
-        )}
-      </li>
-    </ul>
-  );
+  <ul className={`items-end justify-end ml-0 space-y-8 md:flex md:space-x-6 md:space-y-0 text-xl ${isPopup ? 'bg-[#F3F4F6]' : ''} rounded-lg p-4 mr-3`}>
+    <li className={`text-${isPopup ? 'black' : 'white'} transition duration-300 ease-in-out hover:text-purple-500 underline-offset hover:no-underline`}>
+      <a href="#">Home</a>
+    </li>
+    <li className={`text-${isPopup ? 'black' : 'white'} transition duration-300 ease-in-out hover:text-purple-500 underline-offset hover:no-underline`}>
+      <a href="#">About Us</a>
+    </li>
+    <li className={`text-${isPopup ? 'black' : 'white'} transition duration-300 ease-in-out hover:text-purple-500 underline-offset hover:no-underline`}>
+      <a href="#">Blog</a>
+    </li>
+    <li className={`text-${isPopup ? 'black' : 'white'} transition duration-300 ease-in-out hover:text-purple-500 ml-0 underline-offset hover:no-underline`}>
+      <span
+        onMouseEnter={toggleMenu}
+        className={`text-${isPopup ? 'black' : 'white'} cursor-pointer transition duration-300 ease-in-out hover:text-purple-500 hover:no-underline mr-4`}
+      >
+        Your Account
+      </span>
+      {isOpen && (
+        <div className={`absolute left-0 mt-3 w-40 bg-opacity-90 border border-gray-300 rounded-md shadow-lg ${isPopup ? 'bg-white' : ''}`}>
+          <ul>
+            <li className="py-2 px-4 transition duration-300 ease-in-out hover:bg-purple-500 hover:text-white cursor-pointer rounded-md ">Log In</li>
+            <li className="py-2 px-4 transition duration-300 ease-in-out hover:bg-purple-500 hover:text-white cursor-pointer rounded-md">Sign In</li>
+          </ul>
+        </div>
+      )}
+    </li>
+  </ul>
+);
 
   return (
     <nav className="w-full bg-[#0D1117] shadow">
