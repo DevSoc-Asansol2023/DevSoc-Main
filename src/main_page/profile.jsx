@@ -11,11 +11,12 @@ function Profile(){
     const handleClick2=(e)=>{
         setIsOpen(0)
     }
+
     return (
-        <div className='font-bold bg-black text-white h-screen' style={{backgroundImage:`url(${backgroundImage1})`,backgroundSize:'cover',backgroundAttachment:'fixed'}}>
+        <div className='font-bold bg-black text-white bg-fixed bg-cover bg-center pb-40 ' style={{backgroundImage:`url(${backgroundImage1})`}}>
 
             <div class="relative pt-10">
-                <img src={meow} alt="Cover Photo" class="lg:w-1/2 md:w-4/5 sm:w-4/5 mx-auto rounded-3xl h-40 object-cover"/>   
+                <img src={meow} alt="Cover Photo" class="w-4/5 md:w-4/5 lg:w-1/2 xl:w-1/2 sm:w-4/5 mx-auto rounded-3xl h-40 object-cover"/>   
                 <img src={meow} alt="Profile Photo" class="w-40 h-40 rounded-full border-4 border-black absolute bottom-0 left-1/3 transform -translate-x-1/2 translate-y-1/2"/>       
                 <div class="w-6 h-6 rounded-full absolute bottom-0 left-1/3 transform translate-x-12 translate-y-16 bg-green-600"></div>
                 <div class="flex justify-center mt-20 absolute bottom-0 left-1/3 transform translate-x-24 translate-y-20">
@@ -40,7 +41,7 @@ function Profile(){
                 </div>
             </div>
             {isOpen ? (
-                <div class="flex flex-wrap w-3/5 m-auto ">
+                <div class="flex flex-wrap w-3/5 m-auto  ">
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-blue-700  m-auto mt-10">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Recent Events</div>
