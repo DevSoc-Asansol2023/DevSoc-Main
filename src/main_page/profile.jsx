@@ -3,13 +3,13 @@ import meow from './pics/meow.png';
 import backgroundImage1 from './pics/273400317-fe0a38ce-9504-41b0-b8d6-4ac6eb557998.png';
 
 function Profile(){
-    const [isOpen, setIsOpen] = useState(1);
+    const [isOpen, setIsOpen] = useState(0);
     
     const handleClick1=(e)=>{
-        setIsOpen(1)
+        setIsOpen(0)
     }
     const handleClick2=(e)=>{
-        setIsOpen(0)
+        setIsOpen(1)
     }
 
     return (
@@ -32,11 +32,11 @@ function Profile(){
                 <div className='w-full lg:w-1/2 md:w-1/2 sm:w-full flex justify-center lg:justify-start md:justify-start sm:justify-center'>
                     <div className='grid'>
                         <button onClick={handleClick1}>Recent Events</button>
-                        <div className={isOpen?'h-1 w-20 bg-orange-700':'h-1 w-20 bg-black'}></div>
+                        <div className={isOpen?'h-1 w-20 bg-black':'h-1 w-20 bg-orange-700'}></div>
                         </div>
                     <div className='grid'>
                         <button className='ml-8' onClick={handleClick2} >Registered Events</button>
-                        <div className={isOpen?'h-1 w-28 ml-8 bg-black':'h-1 w-28 ml-8 bg-orange-700'}></div>
+                        <div className={isOpen?'h-1 w-28 ml-8 bg-orange-700':'h-1 w-28 ml-8 bg-black'}></div>
                     </div>
                 </div>
             </div>
