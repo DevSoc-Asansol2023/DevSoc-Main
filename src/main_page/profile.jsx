@@ -5,10 +5,10 @@ import backgroundImage1 from './pics/273400317-fe0a38ce-9504-41b0-b8d6-4ac6eb557
 function Profile(){
     const [isOpen, setIsOpen] = useState(0);
     
-    const handleClick1=(e)=>{
+    const switchTab1=(e)=>{
         setIsOpen(0)
     }
-    const handleClick2=(e)=>{
+    const switchTab2=(e)=>{
         setIsOpen(1)
     }
 
@@ -31,11 +31,11 @@ function Profile(){
             <div className='flex justify-center mt-40 pt-2'>
                 <div className='w-full lg:w-1/2 md:w-1/2 sm:w-full flex justify-center lg:justify-start md:justify-start sm:justify-center'>
                     <div className='grid'>
-                        <button onClick={handleClick1}>Recent Events</button>
+                        <button onClick={switchTab1}>Recent Events</button>
                         <div className={isOpen?'h-1 w-20 bg-black':'h-1 w-20 bg-orange-700'}></div>
                         </div>
                     <div className='grid'>
-                        <button className='ml-8' onClick={handleClick2} >Registered Events</button>
+                        <button className='ml-8' onClick={switchTab2} >Registered Events</button>
                         <div className={isOpen?'h-1 w-28 ml-8 bg-orange-700':'h-1 w-28 ml-8 bg-black'}></div>
                     </div>
                 </div>
