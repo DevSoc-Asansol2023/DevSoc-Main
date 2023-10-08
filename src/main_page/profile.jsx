@@ -40,7 +40,7 @@ function Profile(){
                     </div>
                 </div>
             </div>
-            {isOpen ? (
+            {isOpen ==0 ? (
                 <div class="flex flex-wrap w-3/5 m-auto  ">
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-blue-700  m-auto mt-10">
                 <div class="px-6 py-4">
@@ -69,7 +69,12 @@ function Profile(){
                 </div>
             </div>
             </div>
-            ):(
+            ):
+            (<div>
+            </div>)
+            }
+            {isOpen==1 ?
+            (
                 <div class="flex flex-wrap w-3/5 m-auto">
             <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500 m-auto mt-10">
                 <div class="px-6 py-4">
@@ -97,7 +102,10 @@ function Profile(){
                     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
                 </div>
             </div>
-            </div>)
+            </div>):
+            (
+                <div></div>
+            )
             }
 
         </div>
