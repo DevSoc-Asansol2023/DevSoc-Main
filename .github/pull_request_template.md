@@ -17,6 +17,7 @@
 - [ ] I have updated the documentation to reflect the changes I've made.
 - [ ] My code follows the code style of this project.
 - [ ] The title of my pull request is a short description of the requested changes.
+- [ ] I have shared relevant screenshots or videos for both desktop and mobile view.
 
 ## Screenshots/video/urls
 
