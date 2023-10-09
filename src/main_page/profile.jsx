@@ -1,15 +1,14 @@
 import React ,{useState} from 'react';
 import meow from './pics/meow.png';
 import backgroundImage1 from './pics/273400317-fe0a38ce-9504-41b0-b8d6-4ac6eb557998.png';
+import RecentEvents from './tabsdata/RecentEvents';
+import RegisteredEvents from './tabsdata/RegisteredEvents';
 
 function Profile(){
     const [isOpen, setIsOpen] = useState(0);
     
-    const switchTab1=(e)=>{
-        setIsOpen(0)
-    }
-    const switchTab2=(e)=>{
-        setIsOpen(1)
+    const switchTab=(e)=>{
+        setIsOpen(e.target.value)
     }
 
     return (
@@ -31,78 +30,25 @@ function Profile(){
             <div className='flex justify-center mt-40 pt-2'>
                 <div className='w-full lg:w-1/2 md:w-1/2 sm:w-full flex justify-center lg:justify-start md:justify-start sm:justify-center'>
                     <div className='grid'>
-                        <button onClick={switchTab1}>Recent Events</button>
+                        <button onClick={switchTab} value={0}>Recent Events</button>
                         <div className={isOpen?'h-1 w-20 bg-black':'h-1 w-20 bg-orange-700'}></div>
                         </div>
                     <div className='grid'>
-                        <button className='ml-8' onClick={switchTab2} >Registered Events</button>
+                        <button className='ml-8' onClick={switchTab} value={1}>Registered Events</button>
                         <div className={isOpen?'h-1 w-28 ml-8 bg-orange-700':'h-1 w-28 ml-8 bg-black'}></div>
                     </div>
                 </div>
             </div>
             {isOpen ==0 ? (
-                <div class="flex flex-wrap w-3/5 m-auto  ">
-                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-blue-700  m-auto mt-10">
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Recent Events</div>
-                    <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                    </p>
-                </div>
-                <div class="px-6 pt-4 pb-2">
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                </div>
-            </div>
-            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-blue-700 mt-10  m-auto">
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Recent Events</div>
-                    <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                    </p>
-                </div>
-                <div class="px-6 pt-4 pb-2">
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                </div>
-            </div>
-            </div>
+                <RecentEvents/>
             ):
             (<div>
             </div>)
             }
             {isOpen==1 ?
             (
-                <div class="flex flex-wrap w-3/5 m-auto">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500 m-auto mt-10">
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Registered Events</div>
-                    <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                    </p>
-                </div>
-                <div class="px-6 pt-4 pb-2">
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                </div>
-            </div>
-            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500 m-auto mt-10">
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Registered Events</div>
-                    <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                    </p>
-                </div>
-                <div class="px-6 pt-4 pb-2">
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                </div>
-            </div>
-            </div>):
+             <RegisteredEvents/>   
+                ):
             (
                 <div></div>
             )
