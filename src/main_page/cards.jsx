@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Card = ({ title, index }) => {
   const [ref, inView] = useInView({
@@ -46,7 +46,7 @@ function Cards() {
   ];
 
   return (
-    <div className="h-auto bg-[#0D1117]  overflow-hidden font-poppins">
+    <div className="h-auto bg-[#0D1117]   overflow-hidden font-poppins">
       <div className="text-white flex  flex-col text-[70px] md:flex md:flex-row md:items-center md:gap-8 md:justify-center lg:text-[100px] ">
         <span className="mt-5 font-extrabold ">INNOVATE.</span>
         <span
