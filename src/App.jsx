@@ -5,6 +5,7 @@ import Build from './main_page/build';
 import Navbar from './main_page/navbar';
 import Cards from './main_page/cards';
 import Footer from './main_page/footer';
+import ScrollButton from './main_page/ScrollButton';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Build />
       <Cards />
       <Footer />
+      <ScrollButton />
     </>
   );
 }
