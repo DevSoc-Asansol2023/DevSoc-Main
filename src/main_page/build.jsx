@@ -94,9 +94,9 @@ const CountingNumber = ({ endValue, displayText }) => {
 
 function Build() {
   return (
-    <div className="flex flex-col sm:mb-0 h-[100vh] md:max-h-[90vh]">
-      <div className="sm:flex justify-center items-start h-screen bg-[#0D1117] font-inter">
-        <div className="sm:w-[1024px] md:h-[500px] bg-[#1D1D1D] md:grid grid-cols-3 grid-rows-3 gap-1 p-4 relative rounded-2xl mb-0">
+    <div className="flex flex-col h-100">
+      <div className="sm:flex justify-center items-start h-100 bg-[#0D1117] font-inter">
+        <div className="sm:w-[1024px] md:h-[500px] bg-[#1D1D1D] md:grid grid-cols-3 grid-rows-3 gap-1 p-4 relative rounded-2xl mb-4">
           <div className="flex items-center justify-center sm:row-start-1 sm:col-start-1 mb-5">
             <AnimatedButton delay={100}>Build</AnimatedButton>
           </div>
@@ -112,7 +112,7 @@ function Build() {
         <div className="md:hidden flex w-full h-4"></div>
       </div>
 
-      <footer className="flex justify-center items-center text-center  sm:flex sm:flex-col md:flex md:flex-col md:items-center md:justify-start sm:justify-center  bg-[#0D1117] md:mt-0">
+      <div className="flex justify-center items-center text-center  sm:flex sm:flex-col md:flex md:flex-col md:items-center md:justify-start sm:justify-center bg-[#0D1117] md:mt-0">
         <div className="md:flex md:items-center md:mt-0">
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
           <span className="text-white flex flex-col justify-center text-3xl mb-10 sm:mx-10 sm:mt-0 mt-10">
@@ -134,7 +134,7 @@ function Build() {
           </span>
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
         </div>
-      </footer>
+      </div>
     </div>
   );
 }
