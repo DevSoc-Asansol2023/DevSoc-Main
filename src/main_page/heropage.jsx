@@ -1,10 +1,11 @@
 import animatedIcon from "./pics/meow.png";
-
+import ScrollButton from './ScrollButton';
 function HeroPage() {
   return (
     <div className="bg-[#0D1117] h-[70vh] lg:min-h-screen w-full flex flex-col justify-center items-start mx-auto">
       <div className="container flex mx-[21px]">
         <div className="block max-xl:hidden">
+
           <svg viewBox="0 0 24 522" className="w-64 ml-2 h-96" fill="none">
             <rect
               width="3"
