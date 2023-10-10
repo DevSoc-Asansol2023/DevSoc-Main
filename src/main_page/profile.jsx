@@ -5,10 +5,16 @@ import RecentEvents from './tabsdata/RecentEvents';
 import RegisteredEvents from './tabsdata/RegisteredEvents';
 
 function Profile(){
-    const [isOpen, setIsOpen] = useState(0);
+    const array=[<RecentEvents/>,<RegisteredEvents/>]
+    const [isOpen,setIsOpen]=useState({
+        TabLabel:0,TabData:array[0]
+    })
     
     const switchTab=(e)=>{
-        setIsOpen(e.target.value)
+        setIsOpen(
+            {TabLabel:e.target.value,
+            TabData:array[e.target.value]
+            })
     }
 
     return (
@@ -28,31 +34,18 @@ function Profile(){
             </div>
 
             <div className='flex justify-center mt-40 pt-2'>
-                <div className='w-full lg:w-1/2 md:w-1/2 sm:w-full flex justify-center lg:justify-start md:justify-start sm:justify-center'>
+                <div className='w-full lg:w-1/2 md:w-1/2 sm:w-full flex justify-center lg:justify-start md:justify-start sm:justify-center gap-10'>
                     <div className='grid'>
                         <button onClick={switchTab} value={0}>Recent Events</button>
-                        <div className={isOpen?'h-1 w-20 bg-black':'h-1 w-20 bg-orange-700'}></div>
+                        <div className={isOpen.TabLabel==0?'h-1 w-28  bg-orange-700':'h-1 w-28 bg-black'}></div>
                         </div>
                     <div className='grid'>
-                        <button className='ml-8' onClick={switchTab} value={1}>Registered Events</button>
-                        <div className={isOpen?'h-1 w-28 ml-8 bg-orange-700':'h-1 w-28 ml-8 bg-black'}></div>
+                        <button onClick={switchTab} value={1}>Registered Events</button>
+                        <div className={isOpen.TabLabel==1?'h-1 w-28 bg-orange-700':'h-1 w-28 bg-black'}></div>
                     </div>
                 </div>
             </div>
-            {isOpen ==0 ? (
-                <RecentEvents/>
-            ):
-            (<div>
-            </div>)
-            }
-            {isOpen==1 ?
-            (
-             <RegisteredEvents/>   
-                ):
-            (
-                <div></div>
-            )
-            }
+            {isOpen.TabData}
 
         </div>
     )
