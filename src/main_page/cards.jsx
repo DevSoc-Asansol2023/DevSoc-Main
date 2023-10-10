@@ -46,11 +46,14 @@ function Cards() {
   ];
 
   return (
-    <div className="h-100 bg-[#0D1117] font-poppins ">
+    
+    <div className="h-100 bg-[#0D1117] overflow-hidden font-poppins ">
       <div className="text-white flex flex-col justify-center items-center sm:text-[70px] text-[42px] md:flex md:flex-row md:items-center h-100 md:gap-8 md:justify-center lg:text-[100px] ">
+
         <span className="mt-5 font-extrabold">INNOVATE.</span>
         <span
           className="mt-3  font-extrabold bg-gradient-to-b from-pink-500 to-blue-500 text-transparent bg-clip-text inset-0"
+
           style={{
             "--tw-gradient-from": "#F300F8",
             "--tw-gradient-to": "#2EA1E2",
@@ -58,10 +61,11 @@ function Cards() {
         >
           DEVELOP.
         </span>
+
         <span className="mt-3 font-extrabold">ENGAGE</span>
       </div>
       <div className=" flex justify-center items-center">
-        <div className=" bg-gray-900 px-5 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl gap-4">
+        <div className=" bg-gray-900  px-5 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl gap-4">
           {cardTitles.map((title, index) => (
             <Card key={title} title={title} index={index} />
           ))}
