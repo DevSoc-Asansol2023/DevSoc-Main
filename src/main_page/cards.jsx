@@ -21,7 +21,7 @@ const Card = ({ title, index }) => {
       className="rounded-lg overflow-hidden"
     >
       <div className="bg-black text-white p-16 custom-border-gradient rounded-2xl flex flex-col justify-between items-center">
-        <h2 className="flex justify-center items-center text-3xl font-semibold mb-10 ">
+        <h2 className="flex justify-center items-center text-3xl font-semibold mb-12 ">
           {title}
         </h2>
         <button
@@ -46,11 +46,14 @@ function Cards() {
   ];
 
   return (
-    <div className="h-auto bg-[#0D1117]   overflow-hidden font-poppins">
-      <div className="text-white flex  flex-col text-[70px] md:flex md:flex-row md:items-center md:gap-8 md:justify-center lg:text-[100px] ">
-        <span className="mt-5 font-extrabold ">INNOVATE.</span>
+    
+    <div className="h-100 bg-[#0D1117] overflow-hidden font-poppins ">
+      <div className="text-white flex flex-col justify-center items-center sm:text-[70px] text-[42px] md:flex md:flex-row md:items-center h-100 md:gap-8 md:justify-center lg:text-[100px] ">
+
+        <span className="mt-5 font-extrabold">INNOVATE.</span>
         <span
-          className="mt-5 font-extrabold bg-gradient-to-b from-pink-500 to-blue-500 text-transparent bg-clip-text inset-0"
+          className="mt-3  font-extrabold bg-gradient-to-b from-pink-500 to-blue-500 text-transparent bg-clip-text inset-0"
+
           style={{
             "--tw-gradient-from": "#F300F8",
             "--tw-gradient-to": "#2EA1E2",
@@ -58,7 +61,8 @@ function Cards() {
         >
           DEVELOP.
         </span>
-        <span className="mt-5 font-extrabold">ENGAGE</span>
+
+        <span className="mt-3 font-extrabold">ENGAGE</span>
       </div>
       <div className=" flex justify-center items-center">
         <div className=" bg-gray-900  px-5 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl gap-4">
