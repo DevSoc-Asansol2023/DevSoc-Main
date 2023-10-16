@@ -5,9 +5,7 @@ import RecentEvents from './tabsdata/RecentEvents';
 import RegisteredEvents from './tabsdata/RegisteredEvents';
 
 function Profile(){
-    const array=[<RecentEvents/>,<RegisteredEvents/>]
     const tabs = [ {Tab:<RecentEvents/>, label:"Recent Events"} , {Tab:<RegisteredEvents/>, label:"Registered Events"} ]
-    const defaultTab = 0
     const [tab,setTab] = useState(0)
     const switchTab=(tabIdx)=>setTab(tabIdx)
     
