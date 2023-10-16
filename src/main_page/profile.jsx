@@ -6,17 +6,11 @@ import RegisteredEvents from './tabsdata/RegisteredEvents';
 
 function Profile(){
     const array=[<RecentEvents/>,<RegisteredEvents/>]
-    const [isOpen,setIsOpen]=useState({
-        TabLabel:0,TabData:array[0]
-    })
+    const tabs = [ {Tab:<RecentEvents/>, label:"Recent Events"} , {Tab:<RegisteredEvents/>, label:"Registered Events"} ]
+    const defaultTab = 0
+    const [tab,setTab] = useState(0)
+    const switchTab=(tabIdx)=>setTab(tabIdx)
     
-    const switchTab=(e)=>{
-        setIsOpen(
-            {TabLabel:e.target.value,
-            TabData:array[e.target.value]
-            })
-    }
-
     return (
         <div className='font-bold bg-black text-white bg-fixed bg-cover bg-center pb-40 ' style={{backgroundImage:`url(${backgroundImage1})`}}>
 
@@ -35,17 +29,16 @@ function Profile(){
 
             <div className='flex justify-center mt-40 pt-2'>
                 <div className='w-full lg:w-1/2 md:w-1/2 sm:w-full flex justify-center lg:justify-start md:justify-start sm:justify-center gap-10'>
-                    <div className='grid'>
-                        <button onClick={switchTab} value={0}>Recent Events</button>
-                        <div className={isOpen.TabLabel==0?'h-1 w-28  bg-orange-700':'h-1 w-28 bg-black'}></div>
-                        </div>
-                    <div className='grid'>
-                        <button onClick={switchTab} value={1}>Registered Events</button>
-                        <div className={isOpen.TabLabel==1?'h-1 w-28 bg-orange-700':'h-1 w-28 bg-black'}></div>
-                    </div>
+                {tabs.map(({Tab,label},idx)=>
+                <div>
+                <button onClick={()=>switchTab(idx)}> {label} </button>
+                <div className={tab==idx?'h-1 w-28  bg-orange-700':'h-1 w-28 bg-black'}></div>
+                </div>
+                )}   
                 </div>
             </div>
-            {isOpen.TabData}
+
+            {tabs[tab].Tab}
 
         </div>
     )
