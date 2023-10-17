@@ -1,11 +1,10 @@
 import animatedIcon from "./pics/meow.png";
-import ScrollButton from './ScrollButton';
+import ScrollButton from "./ScrollButton";
 function HeroPage() {
   return (
-    <div className="bg-[#0D1117] h-[70vh] lg:min-h-screen w-full flex flex-col justify-center items-start mx-auto">
-      <div className="container flex mx-[21px]">
+    <div className="bg-[#0D1117] h-[70vh] lg:min-h-screen flex flex-col justify-center items-start mx-auto ">
+      <div className="container flex px-[21px]">
         <div className="block max-xl:hidden">
-
           <svg viewBox="0 0 24 522" className="w-64 ml-2 h-96" fill="none">
             <rect
               width="3"
@@ -38,10 +37,10 @@ function HeroPage() {
         </div>
 
         <div className="flex justify-between flex-shrink-0 w-full mx-auto basis-5/6">
-          <div className="flex flex-col justify-center w-full">
+          <div className="flex flex-col justify-center w-full ">
             <div>
               <h1 className="text-4xl font-bold text-[#DD7DF7] mb-6">
-                Let{"'"}s Build Together.
+                {`Let's Build Together.`}
               </h1>
               <p className="mb-6 text-gray-300">
                 Start your journey with Devsoc. Sign Up now!
