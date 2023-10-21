@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useSpring, animated } from "react-spring";
+import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { IoIosCheckmarkCircle } from "react-icons/io";
+import { animated, useSpring } from "react-spring";
 
 const AnimatedButton = ({ delay, children }) => {
   const [shouldAnimate, setShouldAnimate] = useState(false);
@@ -93,20 +94,22 @@ const CountingNumber = ({ endValue, displayText }) => {
 };
 
 function Build() {
+  const { t } = useTranslation('build');
+
   return (
     <div className="flex flex-col h-100">
       <div className="sm:flex justify-center items-start h-100 bg-[#0D1117] font-inter">
         <div className="sm:w-[1024px] md:h-[500px] bg-[#1D1D1D] md:grid grid-cols-3 grid-rows-3 gap-1 p-4 relative rounded-2xl mb-4">
           <div className="flex items-center justify-center sm:row-start-1 sm:col-start-1 mb-5">
-            <AnimatedButton delay={100}>Build</AnimatedButton>
+            <AnimatedButton delay={100}>{t('actionButton1')}</AnimatedButton>
           </div>
 
           <div className="flex items-center justify-center row-start-2 col-start-2 mb-5">
-            <AnimatedButton delay={300}>Review</AnimatedButton>
+            <AnimatedButton delay={300}>{t('actionButton2')}</AnimatedButton>
           </div>
 
           <div className="flex items-center justify-center row-start-3 col-start-3 mb-5">
-            <AnimatedButton delay={500}>Engage</AnimatedButton>
+            <AnimatedButton delay={500}>{t('actionButton3')}</AnimatedButton>
           </div>
         </div>
         <div className="md:hidden flex w-full h-4"></div>
@@ -117,20 +120,22 @@ function Build() {
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
           <span className="text-white flex flex-col justify-center text-3xl mb-10 sm:mx-10 sm:mt-0 mt-10">
             <CountingNumber endValue={10} displayText="10+" />
-            Team Projects
+            {t('teamProjects')}
           </span>
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
           <span className="text-white flex flex-col justify-center text-3xl md:text-center sm:mx-10 mb-7">
-            <CountingNumber endValue={200} displayText="200+" /> Members
+            <CountingNumber endValue={200} displayText="200+" />
+            {t('members')}
           </span>
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
           <span className="text-white flex flex-col justify-center text-3xl md:text-center sm:mx-10 mb-7">
             <CountingNumber endValue={1} displayText="1" />
-            Award received
+            {t('awardsReceived')}
           </span>
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
           <span className="text-white flex flex-col justify-center text-3xl md:text-center sm:mx-10 mb-10">
-            <CountingNumber endValue={20} displayText="20+" /> Team members
+            <CountingNumber endValue={20} displayText="20+" />
+            {t('teamMembers')}
           </span>
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
         </div>

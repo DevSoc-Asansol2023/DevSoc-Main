@@ -1,8 +1,11 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 
 const Card = ({ title, index }) => {
+  const { t } = useTranslation('common');
+
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
@@ -28,7 +31,7 @@ const Card = ({ title, index }) => {
           onClick={() => console.log(`Clicked "Read More" on: ${title}`)}
           className="bg-white hover:bg-purple-500 text-black font-bold px-8 py-4 rounded-xl"
         >
-          Read More
+          {t('readMoreButton')}
         </button>
       </div>
     </motion.div>
@@ -36,21 +39,16 @@ const Card = ({ title, index }) => {
 };
 
 function Cards() {
-  const cardTitles = [
-    "Hackathon",
-    "Upcoming Events",
-    "Submit Your Projects",
-    "1:1 mentorship",
-    "Alumni Connect",
-    "Project Review",
-  ];
+  const { t } = useTranslation('cards');
+
+  const cardTitles = t('cardTitles', { returnObjects: true });
 
   return (
     
     <div className="h-100 bg-[#0D1117] overflow-hidden font-poppins ">
       <div className="text-white flex flex-col justify-center items-center sm:text-[70px] text-[42px] md:flex md:flex-row md:items-center h-100 md:gap-8 md:justify-center lg:text-[100px] ">
 
-        <span className="mt-5 font-extrabold">INNOVATE.</span>
+        <span className="mt-5 font-extrabold">{t('statement1')}.</span>
         <span
           className="mt-3  font-extrabold bg-gradient-to-b from-pink-500 to-blue-500 text-transparent bg-clip-text inset-0"
 
@@ -59,10 +57,10 @@ function Cards() {
             "--tw-gradient-to": "#2EA1E2",
           }}
         >
-          DEVELOP.
+          {t('statement2')}.
         </span>
 
-        <span className="mt-3 font-extrabold">ENGAGE</span>
+        <span className="mt-3 font-extrabold">{t('statement3')}</span>
       </div>
       <div className=" flex justify-center items-center">
         <div className=" bg-gray-900  px-5 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-3xl gap-4">

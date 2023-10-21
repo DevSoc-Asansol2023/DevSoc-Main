@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function NavBar() {
+    const { t } = useTranslation('navBar');
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -21,21 +23,21 @@ function NavBar() {
         <div className="mt-10">
           <ul className="items-end ml-0 space-y-14 md:flex md:space-x-14 md:space-y-0">
             <li className="text-white hover:text-yellow-500 underline-offset hover:no-underline">
-              <a href="#">Home</a>
+              <a href="#">{t('homeLink')}</a>
             </li>
             <li className="text-white hover:text-yellow-500 underline-offset hover:no-underline">
-              <a href="#">About Us</a>
+              <a href="#">{t('aboutUsLink')}</a>
             </li>
             <li className="text-white hover:text-yellow-500 underline-offset hover:no-underline">
-              <a href="#">Blog</a>
+              <a href="#">{t('blogLink')}</a>
             </li>
             <li className="text-white hover:text-yellow-500 ml-0 underline-offset hover:no-underline">
-              <span onMouseEnter={toggleMenu} className="text-white cursor-pointer hover:text-yellow-500 hover:no-underline">Your Account</span>
+              <span onMouseEnter={toggleMenu} className="text-white cursor-pointer hover:text-yellow-500 hover:no-underline">{t('yourAccountMenu')}</span>
               {isOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-opacity-50 border border-gray-300 rounded shadow-lg">
                   <ul>
-                    <li className="py-2 px-4 hover:bg-purple-500 hover:text-white cursor-pointer">Log In</li>
-                    <li className="py-2 px-4 hover:bg-purple-500 hover:text-white cursor-pointer">Sign In</li>
+                    <li className="py-2 px-4 hover:bg-purple-500 hover:text-white cursor-pointer">{t('logInLink')}</li>
+                    <li className="py-2 px-4 hover:bg-purple-500 hover:text-white cursor-pointer">{t('signUpLink')}</li>
                   </ul>
                 </div>
               )}

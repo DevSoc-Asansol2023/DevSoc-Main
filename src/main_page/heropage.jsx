@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import animatedIcon from "./pics/meow.png";
-import ScrollButton from "./ScrollButton";
+
 function HeroPage() {
+  const { t } = useTranslation('hero');
+
   return (
     <div className="bg-[#0D1117] h-[70vh] lg:min-h-screen flex flex-col justify-center items-start mx-auto ">
       <div className="container flex px-[21px]">
@@ -40,25 +43,25 @@ function HeroPage() {
           <div className="flex flex-col justify-center w-full ">
             <div>
               <h1 className="text-4xl font-bold text-[#DD7DF7] mb-6">
-                {`Let's Build Together.`}
+                {t('mission')}
               </h1>
               <p className="mb-6 text-gray-300">
-                Start your journey with Devsoc. Sign Up now!
+                {t('callToAction')}
               </p>
             </div>
             <div className="flex flex-row px-0 mb-6 sm:px-2">
               <input
                 type="text"
-                placeholder="Enter your email"
+                placeholder={t('emailInputPlaceholder')}
                 className="w-full px-4 py-2 font-sans text-black bg-white border rounded-l-lg focus:outline-none focus:ring focus:ring-purple-600 sm:w-96"
               />
               <button className="w-24 h-12 px-4 py-2 mt-0 text-sm text-white bg-purple-600 rounded-r-lg sm:w-40 sm:h-16 lg:text-lg hover:bg-purple-700 focus:outline-none">
-                Sign up
+                {t('signUpButton')}
               </button>
             </div>
 
             <button className="px-8 py-2 w-3/5 h-12 sm:h-16 mt-5 ml-0 sm:ml-10 rounded-xl bg-[#DD7DF7] text-white transition hover:bg-purple-400 focus:outline-none">
-              Get Started
+              {t('getStartedButton')}
             </button>
           </div>
 

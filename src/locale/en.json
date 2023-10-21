@@ -1,0 +1,55 @@
+{
+    "common": {
+        "readMoreButton": "Read More"
+    },
+    "navBar": {
+        "homeLink": "Home",
+        "aboutUsLink": "About Us",
+        "blogLink": "Blog",
+        "yourAccountMenu": "Your Account",
+        "logInLink": "Log In",
+        "signUpLink": "Sign Up"
+    },
+    "main": {
+        "brandName": "Devsoc",
+        "appName": "Commune",
+        "slogan": "OF THE STUDENTS, FOR THE STUDENTS, BY THE STUDENTS",
+        "welcome": "Welcome to Developer Society - Where Your Innovation Takes A Flight!Are you passionate about coding, tech, and everything in between? Look no further! Developer Society is a vibrant club dedicated to fostering creativity and collaboration among developers, designers, and tech enthusiasts like you.",
+        "description": "Join our inclusive community, where beginners and seasoned pros come together to learn, grow, and share their love for all things tech. From engaging workshops and expert-led events to exciting networking opportunities, you'll have access to a supportive platform that empowers you to reach new heights in your tech journey."
+    },
+    "hero": {
+        "mission": "Let's Build Together.",
+        "callToAction": "Start your journey with Devsoc. Sign Up now!",
+        "emailInputPlaceholder": "Enter your email",
+        "signUpButton": "Sign Up",
+        "getStartedButton": "Get Started"
+    },
+    "build": {
+        "actionButton1": "Build",
+        "actionButton2": "Review",
+        "actionButton3": "Engage",
+        "teamProjects": "Team Projects",
+        "members": "Members",
+        "awardsReceived": "Award Received",
+        "teamMembers": "Team Members"
+    },
+    "cards": {
+        "cardTitles": [
+            "Hackathon",
+            "Upcoming Events",
+            "Submit Your Projects",
+            "1:1 mentorship",
+            "Alumni Connect",
+            "Project Review"
+        ],
+        "statement1": "INNOVATE",
+        "statement2": "DEVELOP",
+        "statement3": "ENGAGE"
+    },
+    "footer": {
+        "followUs": "Follow Us",
+        "contactUs": "Contact Us",
+        "contactAddress": "Asansol, West Bengal-713304",
+        "contactEmail": "decsoc.aec@gmail.com"
+    }
+}
