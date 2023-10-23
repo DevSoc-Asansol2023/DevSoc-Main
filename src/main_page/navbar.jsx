@@ -1,13 +1,36 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Avatar from "../components/Avatar";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [login, setLogin] = useState(false);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        setLogin(true);
+      } else {
+        setLogin(false);
+      }
+    });
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleLogout = async (e) => {
+    await signOut(auth);
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/");
+  };
+
   return (
     <nav className="w-full bg-[#0D1117] shadow">
       <svg
@@ -34,7 +57,48 @@ function NavBar() {
             <li className="text-white hover:text-yellow-500 underline-offset hover:no-underline">
               <a href="#">Blog</a>
             </li>
-            <li className="text-white hover:text-yellow-500 ml-0 underline-offset hover:no-underline">
+            {login ? (
+              <li>
+                <span
+                  onMouseEnter={toggleMenu}
+                  className="text-white cursor-pointer hover:text-yellow-500 hover:no-underline"
+                >
+                  <Avatar />
+                </span>
+                {isOpen && (
+                  <div className="mt-2 w-48 bg-opacity-50 border border-gray-300 rounded shadow-lg">
+                    <ul>
+                      <li className="py-2 px-4 hover:bg-purple-500 text-white cursor-pointer">
+                        <button onClick={handleLogout}>Log Out</button>
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </li>
+            ) : (
+              <li className="text-white hover:text-yellow-500 ml-0 underline-offset hover:no-underline">
+                <span
+                  onMouseEnter={toggleMenu}
+                  className="text-white cursor-pointer hover:text-yellow-500 hover:no-underline"
+                >
+                  Your Account
+                </span>
+                {isOpen && (
+                  <div className="absolute left-0 mt-2 w-48 bg-opacity-50 border border-gray-300 rounded shadow-lg">
+                    <ul>
+                      <li className="py-2 px-4 hover:bg-purple-500 hover:text-white cursor-pointer">
+                        <Link to="/login">Log In</Link>
+                      </li>
+                      <li className="py-2 px-4 hover:bg-purple-500 hover:text-white cursor-pointer">
+                        <Link to="/signup">Sign Up</Link>
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </li>
+            )}
+
+            {/* <li className="text-white hover:text-yellow-500 ml-0 underline-offset hover:no-underline">
               <span
                 onMouseEnter={toggleMenu}
                 className="text-white cursor-pointer hover:text-yellow-500 hover:no-underline"
@@ -53,10 +117,10 @@ function NavBar() {
                   </ul>
                 </div>
               )}
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Avatar />
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
