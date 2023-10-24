@@ -47,7 +47,7 @@ function NavBar() {
       </svg>
       <div className="justify-end px-2 mx-auto md:items-center md:flex mr-12 font-inter ">
         <div className="mt-10">
-          <ul className="items-center ml-0 space-y-14 md:flex md:space-x-14 md:space-y-0">
+          <ul className="items-center ml-0 mr-5 space-y-14 md:flex md:space-x-14 md:space-y-0">
             <li className="text-white hover:text-yellow-500 underline-offset hover:no-underline">
               <a href="#">Home</a>
             </li>
@@ -58,7 +58,7 @@ function NavBar() {
               <a href="#">Blog</a>
             </li>
             {login ? (
-              <li>
+              <li className="relative">
                 <span
                   onMouseEnter={toggleMenu}
                   className="text-white cursor-pointer hover:text-yellow-500 hover:no-underline"
@@ -66,7 +66,7 @@ function NavBar() {
                   <Avatar />
                 </span>
                 {isOpen && (
-                  <div className="mt-2 w-48 bg-opacity-50 border border-gray-300 rounded shadow-lg">
+                  <div className="absolute left-0 mt-2 w-24 bg-opacity-50 border border-gray-300 rounded shadow-lg">
                     <ul>
                       <li className="py-2 px-4 hover:bg-purple-500 text-white cursor-pointer">
                         <button onClick={handleLogout}>Log Out</button>
