@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^10.5.0",
     "framer-motion": "^10.14.0",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-intersection-observer": "^9.5.2",
+    "react-router-dom": "^6.17.0",
     "react-spring": "^9.7.2",
     "styled-components": "^6.0.8"
   },
