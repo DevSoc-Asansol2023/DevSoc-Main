@@ -116,21 +116,21 @@ function Build() {
         <div className="md:flex md:items-center md:mt-0">
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
           <span className="text-white flex flex-col justify-center text-3xl mb-10 sm:mx-10 sm:mt-0 mt-10">
-            <CountingNumber endValue={10} displayText="10+" />
+            <CountingNumber endValue={10} displayText="100+" />
             Team Projects
           </span>
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
           <span className="text-white flex flex-col justify-center text-3xl md:text-center sm:mx-10 mb-7">
-            <CountingNumber endValue={200} displayText="200+" /> Members
+            <CountingNumber endValue={200} displayText="850+" /> Members
           </span>
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
           <span className="text-white flex flex-col justify-center text-3xl md:text-center sm:mx-10 mb-7">
-            <CountingNumber endValue={1} displayText="1" />
+            <CountingNumber endValue={1} displayText="5" />
             Award received
           </span>
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
           <span className="text-white flex flex-col justify-center text-3xl md:text-center sm:mx-10 mb-10">
-            <CountingNumber endValue={20} displayText="20+" /> Team members
+            <CountingNumber endValue={20} displayText="50+" /> Team members
           </span>
           <div className="bg-white w-0 h-px md:w-px md:h-28 mx-2"></div>
         </div>
